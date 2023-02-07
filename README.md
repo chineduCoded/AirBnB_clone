@@ -40,8 +40,8 @@ The purpose of this project is to understand how to:<br/>
 * handle named arguments in a function
 # Execution
 Your shell should work like this in interactive mode:
-pre
-code
+<pre>
+<code>
 ~$ ./console.py
 (hbnb) help
 
@@ -51,5 +51,5 @@ EOF help quit<br/>
 (hbnb)
 (hbnb) quit
 $
-/code
-/pre
+</code>
+</pre>
