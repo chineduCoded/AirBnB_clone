@@ -39,17 +39,43 @@ The purpose of this project is to understand how to:<br/>
 * use `*args` and `**kwargs`
 * handle named arguments in a function
 # Execution
-Your shell should work like this in interactive mode:
+
+## Interactive Mode
 <pre>
 <code>
-~$ ./console.py
+$ ./console.py
 (hbnb) help
 
 Documented commands (type help <topic>):
+========================================
 EOF help quit<br/>
 (hbnb)
 (hbnb)
 (hbnb) quit
+$
+</code>
+</pre>
+
+## Non-Interactive Mode
+<pre>
+<code>
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF help quit
+(hbnb)
+$
+$ cat test_help
+help
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF help quit
+(hbnb)
 $
 </code>
 </pre>
