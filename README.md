@@ -12,6 +12,23 @@
 
 # Description
 ![architecture map](https://res.cloudinary.com/dtzzqvuzs/image/upload/v1675742665/Github/git_image2_q3obv3.png)
+
+This is the first step towards building full web application: the AirBnB clone. This first step is very important because it will be used to build during the project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
+Each task is linked and will help to:
+* put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
+* create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+* create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
+* create the first abstracted storage engine of the project: File storage.
+* create all unittests to validate all our classes and storage engine
+
+# What’s a command interpreter?
+A command interpreter allows the user to interact with a program using commands in the form of text lines. But in our case we will use python module called `cmd` to manage the objects of the project:
+* Create a new object (ex: a new User or new Place)
+* Retrieve an object from a file, a database etc…
+* Do operations on objects (count, compute stats, etc…)
+* Update attributes of an object
+* Destroy an object
+
 # Purpose
 The purpose of this project is to understand how to:<br/>
 * create a Python package
@@ -21,3 +38,18 @@ The purpose of this project is to understand how to:<br/>
 * manage `datetime`
 * use `*args` and `**kwargs`
 * handle named arguments in a function
+# Execution
+Your shell should work like this in interactive mode:
+pre
+code
+~$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+EOF help quit<br/>
+(hbnb)
+(hbnb)
+(hbnb) quit
+$
+/code
+/pre
