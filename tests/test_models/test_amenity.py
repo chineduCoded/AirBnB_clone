@@ -73,7 +73,7 @@ class TestAmenity_instantiation(unittest.TestCase):
     def test_instantiation_with_kwargs(self):
         """instantiation with kwargs test method"""
         date_time = datetime.today()
-        date_time_iso = dt.isoformat()
+        date_time_iso = date_time.isoformat()
         amen = Amenity(id="567", created_at=date_time_iso, updated_at=date_time_iso)
         self.assertEqual(amen.id, "567")
         self.assertEqual(amen.created_at, date_time)
@@ -107,7 +107,7 @@ class TestAmenity_save(unittest.TestCase):
     def test_one_save(self):
         amen = Amenity()
         sleep(0.05)
-        first_updated_at = ame.updated_at
+        first_updated_at = amen.updated_at
         amen.save()
         self.assertLess(first_updated_at, amen.updated_at)
 
@@ -177,7 +177,7 @@ class TestAmenity_to_dict(unittest.TestCase):
 
     def test_contrast_to_dict_dunder_dict(self):
         amen = Amenity()
-        self.assertNotEqual(am.to_dict(), amen.__dict__)
+        self.assertNotEqual(amen.to_dict(), amen.__dict__)
 
     def test_to_dict_with_arg(self):
         amen = Amenity()
