@@ -24,7 +24,8 @@ class BaseModel:
                 if key != "__class__":
                     setattr(self, key, value)
                     if key in ["created_at", "updated_at"]:
-                        setattr(self, key, datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f"))
+                        dt = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                        setattr(self, key, dt)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
@@ -35,7 +36,11 @@ class BaseModel:
         """
         Return string representation of the object
         """
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(
+                self.__class__.__name__,
+                self.id,
+                self.__dict__
+        )
 
     def save(self):
         """updates the public instance attribute with the current datetime"""

@@ -74,7 +74,11 @@ class TestAmenity_instantiation(unittest.TestCase):
         """instantiation with kwargs test method"""
         date_time = datetime.today()
         date_time_iso = date_time.isoformat()
-        amen = Amenity(id="567", created_at=date_time_iso, updated_at=date_time_iso)
+        amen = Amenity(
+                id="567",
+                created_at=date_time_iso,
+                updated_at=date_time_iso
+                )
         self.assertEqual(amen.id, "567")
         self.assertEqual(amen.created_at, date_time)
         self.assertEqual(amen.updated_at, date_time)
