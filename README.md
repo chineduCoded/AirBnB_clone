@@ -6,12 +6,9 @@
 * Requirements
 * File Structure
 * Usage Examples
-* Bugs
-* Authors
-* Licence
 
 # Description
-![architecture map](https://res.cloudinary.com/dtzzqvuzs/image/upload/v1675742665/Github/git_image2_q3obv3.png)
+![architecture map](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png)
 
 This is the first step towards building full web application: the AirBnB clone. This first step is very important because it will be used to build during the project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 Each task is linked and will help to:
